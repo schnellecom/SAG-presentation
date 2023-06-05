@@ -363,6 +363,10 @@ style=numeric,
     \includegraphics[width=\textwidth]{images/terms.png}
 \end{frame}
 
+\begin{frame}
+    \includegraphics[height=\textheight]{images/constants.png}
+\end{frame}
+
 \begin{frame}{A lemma}
     \begin{lemma}[2]
         Let $I\in \R^{p\times p}$ identity matrix, $e = \begin{pmatrix}I \\ \vdots \\ I\end{pmatrix}\in \R^{np \times p}$, $\alpha, \beta \in \R \setminus \{0\}$\\
@@ -390,15 +394,15 @@ style=numeric,
 \end{frame}
 
 \begin{frame}{Comparison to FG}
-    \begin{center}
+    \begin{block}
     \begin{tabular}{ c | c c }
      & convex & strongly convex \\ 
      \hline
      FG & $\mathcal{O}(1/k)$ & $\mathcal{O}(\rho^k)$ \\  
      SG & $\mathcal{O}(1/\sqrt{k})$ & $\mathcal{O}(1/k)$\\
-     SAG & &
+     SAG & \only<2->{$\mathcal{O}(1/k)$} & \only<2->{$\mathcal{O}(\rho^k)$} 
     \end{tabular}
-    \end{center}
+    \end{block}
     \only<2->{For SG and SAG the convergence is in $\mathbb{E}$}
 \end{frame}
 
@@ -425,6 +429,25 @@ style=numeric,
     Logistic regression, with same learning rate for all algorithms
 \end{frame}
 
+\begin{frame}
+    \includegraphics[width=1.0\textwidth]{images/10000.png}
+    \begin{center}
+        With $\eta_k = 1/10.000$
+    \end{center}
+\end{frame}
 
+\begin{frame}
+    \includegraphics[width=1.0\textwidth]{images/1000.png}
+    \begin{center}
+        With $\eta_k = 1/1.000$
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \includegraphics[width=1.0\textwidth]{images/100.png}
+    \begin{center}
+        With $\eta_k = 1/100$
+    \end{center}
+\end{frame}
 
 \end{document}
